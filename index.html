@@ -1,82 +1,118 @@
 <html>
-<title>Deal of the Day</title>
-<style>
+<head>
+	<title>Deal of the Day</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<style type="text/css">
 body {
-  width: 100%;
-  height: 100%;
-  background: #000;
+  background: #2d2d2d;
+}
+
+.Iam {
+  padding: 2em 5em;
+  font: normal 2vw/3vw Montserrat, sans-serif;
+  color: #999;
+}
+.Iam p {
+  height: 2vw;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
   overflow: hidden;
-}
-
-.fade {
   position: relative;
-  width: 100%;
-  min-height: 60vh;
-  top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
-  z-index: 1;
+  height: 3vw;
+  top: 2vw;
 }
-
-.star-wars {
-  display: flex;
-  justify-content: center;
+.Iam .innerIam {
+  display: inline-block;
+  color: #e74c3c;
   position: relative;
-  height: 800px;
-  color: #feda4a;
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 500%;
-  font-weight: 600;
-  letter-spacing: 6px;
-  line-height: 150%;
-  perspective: 400px;
-  text-align: justify;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 5s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 5s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+@keyframes move{
+0%  { top: 0vw; }
+20% { top: -3vw; }
+40% { top: -6vw; }
+60% { top: -9vw; }
+80% { top: -12vw; }
 }
 
-.crawl {
-  position: relative;
-  top: 9999px;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear infinite;
+@-webkit-keyframes move {
+    0%  { top: 0vw; }
+    20% { top: -3vw; }
+    40% { top: -6vw; }
+    60% { top: -9vw; }
+    80% { top: -12vw; }
 }
-
-.crawl > .title {
-  font-size: 90%;
-  text-align: center;
+@-moz-keyframes move {
+    0%  { top: 0vw; }
+    20% { top: -3vw; }
+    40% { top: -6vw; }
+    60% { top: -9vw; }
+    80% { top: -12vw; }
 }
-
-.crawl > .title h1 {
-  margin: 0 0 100px;
-  text-transform: uppercase;
+@-o-keyframes move {
+    0%  { top: 0vw; }
+    20% { top: -3vw; }
+    40% { top: -6vw; }
+    60% { top: -9vw; }
+    80% { top: -12vw; }
 }
-
-@keyframes crawl {
-  0% {
-    top: 0;
-    transform: rotateX(20deg)  translateZ(0);
-  }
-  100% { 
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
+@keyframes move {
+    0%  { top: 0vw; }
+    20% { top: -3vw; }
+    40% { top: -6vw; }
+    60% { top: -9vw; }
+    80% { top: -12vw; }
 }	
 </style>
 <body>
-<div class="fade"></div>
+<div class="Iam">
 
-<section class="star-wars">
-
-  <div class="crawl">
-
-    <div class="title">
-      <p>&ldquo;Hey Google, Talk to...</p>
-      <h1>The Deal of the Day.&rdquo;</h1>
+<p>&ldquo;Hey Google, Talk to The Deal of the Day for</p>
+<b>
+  <div class="innerIam">
+    my favorite show.&rdquo;<br />
+    this podcast I'm listening to.&rdquo;<br /> 
+    my [favorite brand here].&rdquo;<br />
+    my [that influencer I follow].&rdquo;<br />
+    the nearest pizza place.&rdquo;
     </div>
-    
-    <p>It is a dark time for the attention economy. Screenshare is past the saturation point. Users gather around voices they know and trust.</p>      
-    <p>Conversational UI has given rise to the newest, yet oldest medium for brands to speak to their boldest advocates and newest prospects.</p>
-    <p>Deal of the Day is your hands-free weapon to help save your people from brand noise and restore freedom to the galaxy…</p>
-  </div>
+</b>
 
-</section>
+<p>
+	Deal of the Day is a Google Action that demonstrates what it would feel like to have a 
+	voice-enabled app integrate with your Open Graph data that follows you everywhere 
+	you have access to Google Assistant, which is currently about 500 million different places.
+	Whether you're driving, typing, or in the middle of another conversation, it takes zero install and 
+	no more than one simple phrase to get you actionable data toward your next closed deal: "Hey Google, The Deal of the Day." 
+</p>
+
+</div>
 </body>
 </html>
